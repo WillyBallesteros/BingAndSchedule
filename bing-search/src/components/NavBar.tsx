@@ -8,7 +8,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  InputRightElement
+  InputRightElement,
 } from "@chakra-ui/react";
 import logo from "../assets/bing.jpg";
 import { Dispatch, FunctionComponent, SetStateAction, useState } from "react";
@@ -18,11 +18,9 @@ interface IProps {
 }
 
 const NavBar: FunctionComponent<IProps> = (props: IProps) => {
-
-  const [textToSearch, setTextToSearch] = useState<string>('');
+  const [textToSearch, setTextToSearch] = useState<string>("");
 
   const handleClick = () => {
-    console.log(textToSearch);
     props.setWordSearch(textToSearch);
   };
 
@@ -35,18 +33,26 @@ const NavBar: FunctionComponent<IProps> = (props: IProps) => {
             <Text>Microsoft Bing</Text>
           </HStack>
         </Box>
-        <Box height="60%" padding={'12px'}>
+        <Box height="60%" padding={"12px"}>
           <Stack spacing={3}>
             <InputGroup size="md">
               <Input
                 pr="4.5rem"
-                placeholder="Realiza tu busqueda en Bing..."
-                onChange={(e) =>
-                  setTextToSearch(e.currentTarget.value)
-                }
+                placeholder="Search in Bing..."
+                onChange={(e) => setTextToSearch(e.currentTarget.value)}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    handleClick();
+                  }
+                }}
               />
               <InputRightElement width="4.5rem">
-                <Button h="1.75rem" size="sm" colorScheme='blue' onClick={handleClick}>
+                <Button
+                  h="1.75rem"
+                  size="sm"
+                  colorScheme="blue"
+                  onClick={handleClick}
+                >
                   Search
                 </Button>
               </InputRightElement>

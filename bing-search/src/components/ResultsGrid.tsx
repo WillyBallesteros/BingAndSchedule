@@ -1,6 +1,7 @@
 import { useEffect, useState, FunctionComponent } from "react";
 import apiClient from "../services/api-client";
 import {
+  Spinner,
   Tab,
   TabIndicator,
   TabList,
@@ -35,16 +36,24 @@ const styles = {
 
 const ResultsGrid: FunctionComponent<SearchProps> = (props: SearchProps) => {
   const [searchResults, setSearchResults] = useState<FetchResultsResponse>();
-  const [error, setError] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (props.wordSearch !== "") {
+      setLoading(true);
       apiClient
         .get<FetchResultsResponse>(
           `/search?count=10&mkt=en-US&q=${props.wordSearch}`
         )
-        .then((res) => setSearchResults(res.data))
-        .catch((err) => setError(err.message));
+        .then((res) => {
+          setSearchResults(res.data);
+          setLoading(false);
+        })
+        .catch((err) => {
+          setError(err.message);
+          setLoading(false);
+        });
     }
   }, [props.wordSearch]);
 
@@ -60,33 +69,40 @@ const ResultsGrid: FunctionComponent<SearchProps> = (props: SearchProps) => {
       <TabPanels>
         <TabPanel>
           <div color="white" style={styles.classFlex}>
-            {searchResults?.webPages?.value?.map((item) => (
-              <WebPageCard pageData={item} />
-            ))}
+            {searchResults?.webPages?.value ? searchResults?.webPages?.value?.map((item, index) => (
+              <WebPageCard key={index} pageData={item} />
+            )): props.wordSearch && <p>No results found</p>}
           </div>
         </TabPanel>
         <TabPanel className="">
           <div color="white" style={styles.classFlex}>
-            {searchResults?.images?.value?.map((item) => (
-              <ImageCard pageData={item} />
-            ))}
+            {searchResults?.images?.value ? searchResults?.images?.value?.map((item, index) => (
+              <ImageCard key={index} pageData={item} />
+            )): props.wordSearch && <p>No results found</p>}
           </div>
         </TabPanel>
         <TabPanel>
           <div color="white" style={styles.classFlex}>
-            {searchResults?.news?.value?.map((item) => (
-              <NewCard pageData={item} />
-            ))}
+            {searchResults?.news?.value ? searchResults?.news?.value?.map((item, index) => (
+              <NewCard key={index} pageData={item} />
+            )): props.wordSearch && <p>No results found</p>}
           </div>
         </TabPanel>
         <TabPanel>
           <div color="white" style={styles.classFlex}>
-            {searchResults?.videos?.value?.map((item) => (
-              <VideoCard pageData={item} />
-            ))}
+            {searchResults?.videos?.value ?searchResults?.videos?.value?.map((item, index) => (
+              <VideoCard key={index} pageData={item} />
+            )): props.wordSearch && <p>No results found</p>}
           </div>
         </TabPanel>
       </TabPanels>
+      {loading ? <Spinner
+            thickness="4px"
+            speed="0.65s"
+            emptyColor="gray.200"
+            color="blue.500"
+            size="xl"
+          /> : null}
     </Tabs>
   );
 };

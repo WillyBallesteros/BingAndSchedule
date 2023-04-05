@@ -10,9 +10,9 @@ const NewCard: FunctionComponent<IProps> = (props: IProps) => {
   return (
     <Card maxW="sm" height={'500px'} margin={'15px'}>
       <CardBody>
-        { (news.image.contentUrl) ? <Image
-          src={news.image.contentUrl}
-          alt={news.name}
+        { (news?.image?.contentUrl) ? <Image
+          src={news?.image?.contentUrl}
+          alt={news?.name}
           borderRadius="lg"
         />: null }
         <Stack mt="6" spacing="3">

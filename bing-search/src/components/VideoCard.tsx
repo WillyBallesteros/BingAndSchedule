@@ -10,8 +10,8 @@ const VideoCard: FunctionComponent<IProps> = (props: IProps) => {
   return (
     <Card maxW="sm" height={'500px'} margin={'15px'}>
       <CardBody>
-        { (news.thumbnailUrl) ? <Image
-          src={news.thumbnailUrl}
+        { (news?.thumbnailUrl) ? <Image
+          src={news?.thumbnailUrl}
           alt={news.name}
           borderRadius="lg"
         />: null }
