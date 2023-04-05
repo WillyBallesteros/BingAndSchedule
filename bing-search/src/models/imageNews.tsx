@@ -1,0 +1,3 @@
+interface ImageNews {
+	contentUrl: string
+}

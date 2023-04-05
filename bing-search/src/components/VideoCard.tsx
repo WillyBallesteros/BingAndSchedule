@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import { Card, CardBody, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 interface IProps {
-  pageData: ValueNew,
+  pageData: ValueVideo,
 }
 
 const VideoCard: FunctionComponent<IProps> = (props: IProps) => {
