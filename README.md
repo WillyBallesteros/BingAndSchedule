@@ -1,5 +1,5 @@
-# BingAndSchedule
-App to serch using the Bing Api and Schedule App using .NET Core
+# Front Bing Search - Backend Location Schedule
+Apps to search using the Bing Api and Location Schedule App using .NET Core
 
 Deploy link :  https://bing-search-pi.vercel.app/
 
