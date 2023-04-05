@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "B2ESl4buDCvEIcR19D/J/8wJtp1ADBNc2PGwTP0QGyinQFJYGdZJYR4uQoSQBRm5E/8wqDxJpJdqG014O3KB+g==",
+  "success": true,
+  "projectFilePath": "C:\\study\\BingAndSchedule\\locationsApi\\Tests\\Tests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\William.Ballesteros\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\William.Ballesteros\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\William.Ballesteros\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
