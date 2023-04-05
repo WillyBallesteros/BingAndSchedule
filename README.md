@@ -1,4 +1,4 @@
-# Front Bing Search - Backend Location Schedule
+# FrontEnd Bing Search - Backend Location Schedule
 Apps to search using the Bing Api and Location Schedule App using .NET Core
 
 Deploy link :  https://bing-search-pi.vercel.app/
