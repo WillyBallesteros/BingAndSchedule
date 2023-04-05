@@ -1,16 +1,13 @@
-﻿namespace Domain.Validators.Shared
+﻿using Domain.DTOs;
+
+namespace Domain.Validators.Shared
 {
     public class CommonValidators : ICommonValidators
     {
-        public async Task<bool> BeAValidAge(DateTime date)
+        public bool IsValidString(string str)
         {
-            int currentYear = DateTime.Now.Year;
-            int dobYear = date.Year;
-            if (dobYear <= currentYear && dobYear > (currentYear - 120))
-            {
-                return true;
-            }
-            return false;
+            TimeSpan timeSpan;
+            return TimeSpan.TryParse(str, out timeSpan);
         }
     }
 }

@@ -15,8 +15,7 @@ namespace Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data source=localhost\sqlexpress; 
-                Initial Catalog=LocationsApi; Integrated Security=True")
+            optionsBuilder.UseSqlServer(@"Server=tcp:mitests.database.windows.net,1433;Initial Catalog=LocationApi;Persist Security Info=False;User ID=ragnar;Password=Mascota2023;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
             .LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, Microsoft.Extensions.Logging.LogLevel.Information)
             .EnableSensitiveDataLogging();
         }

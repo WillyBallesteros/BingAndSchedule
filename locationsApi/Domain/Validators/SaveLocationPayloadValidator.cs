@@ -1,6 +1,8 @@
 ﻿using Domain.DTOs;
+using Domain.Entities;
 using Domain.Validators.Shared;
 using FluentValidation;
+using Microsoft.VisualBasic;
 
 namespace Domain.Validators
 {
@@ -43,8 +45,27 @@ namespace Domain.Validators
                 .WithMessage("El campo es requerido")
                 .MaximumLength(100)
                 .WithMessage("Máximo 100 caracteres");
-        }
 
-        
+            var scheduleValidator = new ScheduleValidator(commonValidators);
+
+            RuleFor(x => x.Schedules)
+                .NotNull()
+                .NotEmpty()
+                .Custom((list, context) =>
+                {
+                    foreach (var schedule in list)
+                    {
+                        var result = scheduleValidator.Validate(schedule);
+                        if (!result.IsValid)
+                        {
+                            foreach (var error in result.Errors)
+                            {
+                                context.AddFailure($"Schedule: {error.ErrorMessage}");
+                            }
+                        }
+                    }
+                });
+        }
     }
+
 }

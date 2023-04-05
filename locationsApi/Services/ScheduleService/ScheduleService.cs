@@ -24,8 +24,8 @@ namespace Services.ScheduleService
                 {
                     Id = Schedule.Id,
                     Day = Schedule.Day,
-                    Open =Schedule.Open,
-                    Close =Schedule.Close,
+                    Open =Schedule.Open.ToString(),
+                    Close =Schedule.Close.ToString(),
                     Observation = Schedule.Observation
                 }).AsNoTracking().OrderByDescending(x => x.Id).ToListAsync();
 

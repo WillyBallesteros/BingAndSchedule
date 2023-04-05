@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using System.Data.Entity.SqlServer;
+using System.Runtime.InteropServices;
+using AutoMapper;
 using Data;
 using Domain.DTOs;
 using Domain.Entities;
@@ -22,10 +24,7 @@ namespace Services.LocationService
         {
             var response = new ResponsePackage<bool>();
             var cancellationToken = new CancellationToken();            
-            payload.Schedules.Add(new ScheduleDto
-            {
-                Observation = "Creación de Ubicación"
-            });
+            
 
             var Location = _mapper.Map<Location>(payload);            
             await _context!.Locations!.AddAsync(Location, cancellationToken);          

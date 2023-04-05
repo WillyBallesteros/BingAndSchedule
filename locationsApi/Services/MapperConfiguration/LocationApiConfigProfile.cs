@@ -8,9 +8,13 @@ namespace Services.MapperConfiguration
     {
         public LocationsApiConfigProfile()
         {
-            
-            CreateMap<Schedule, ScheduleDto>().ReverseMap();
+            CreateMap<Schedule, ScheduleDto>()
+                .ForMember(x => x.Open, opt => opt.MapFrom(s => s.Open.ToString()))
+                .ForMember(x => x.Close, opt => opt.MapFrom(s => s.Close.ToString()))
+                .ReverseMap();
+
             CreateMap<Location, LocationDto>().ReverseMap();
+
             CreateMap<SaveLocationPayload, Location>()
                 .ForMember(x => x.Name, opt => opt.MapFrom(s => s.Name))
                 .ForMember(x => x.Address, opt => opt.MapFrom(s => s.Address))

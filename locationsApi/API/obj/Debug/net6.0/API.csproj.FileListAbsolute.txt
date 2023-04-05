@@ -74,6 +74,12 @@ C:\Loymark\LoymarkService\API\obj\Debug\net6.0\refint\API.dll
 C:\Loymark\LoymarkService\API\obj\Debug\net6.0\API.pdb
 C:\Loymark\LoymarkService\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Loymark\LoymarkService\API\obj\Debug\net6.0\ref\API.dll
+C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
+C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
+C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.AssemblyInfo.cs
+C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
+C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
 C:\study\BingAndSchedule\locationsApi\API\bin\Debug\net6.0\appsettings.Development.json
 C:\study\BingAndSchedule\locationsApi\API\bin\Debug\net6.0\appsettings.json
 C:\study\BingAndSchedule\locationsApi\API\bin\Debug\net6.0\API.exe
@@ -143,13 +149,6 @@ C:\study\BingAndSchedule\locationsApi\API\bin\Debug\net6.0\Services.dll
 C:\study\BingAndSchedule\locationsApi\API\bin\Debug\net6.0\Domain.pdb
 C:\study\BingAndSchedule\locationsApi\API\bin\Debug\net6.0\Services.pdb
 C:\study\BingAndSchedule\locationsApi\API\bin\Debug\net6.0\Data.pdb
-C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.csproj.AssemblyReference.cache
-C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.GeneratedMSBuildEditorConfig.editorconfig
-C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.AssemblyInfoInputs.cache
-C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.AssemblyInfo.cs
-C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.csproj.CoreCompileInputs.cache
-C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
-C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cache
 C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\staticwebassets\msbuild.build.API.props
 C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.API.props
@@ -164,3 +163,4 @@ C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\refint\API.dll
 C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.pdb
 C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\ref\API.dll
+C:\study\BingAndSchedule\locationsApi\API\obj\Debug\net6.0\API.MvcApplicationPartsAssemblyInfo.cs
